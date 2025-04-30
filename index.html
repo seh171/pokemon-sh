@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pokémon Lookup</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <h1>Pokémon Lookup</h1>
-  <input type="text" id="search" placeholder="Enter Pokémon name or ID">
-  <button onclick="fetchPokemon()">Search</button>
-  <div id="result"></div>
+  <header>
+    <h1>Pokémon Lookup</h1>
+    <p class="subtitle">Search for your favorite Pokémon by name or ID</p>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <form id="searchForm" onsubmit="fetchPokemon(); return false;">
+        <label for="search" class="visually-hidden">Search Pokémon</label>
+        <input type="text" id="search" name="search" placeholder="e.g. pikachu or 25" required />
+        <button type="submit">Search</button>
+        <button type="button" onclick="fetchRandomPokemon()">🎲 Random</button>
+      </form>
+    </section>
+
+    <section id="result" class="result-section">
+      <!-- Pokémon info will be displayed here -->
+    </section>
+
+    <section id="evolution" class="evolution-section">
+      <!-- Evolution info will be displayed here -->
+    </section>
+
+    <section id="favorites" class="favorites-section">
+      <h2>Your Favorite Pokémon</h2>
+      <ul id="favoriteList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pokémon Lookup | Powered by <a href="https://pokeapi.co/" target="_blank">PokéAPI</a></p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

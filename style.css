@@ -1,17 +1,138 @@
+/* Base styling */
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom right, #f0f8ff, #e0f0ff);
+    color: #333;
     text-align: center;
-    background-color: #f2f2f2;
-    padding: 2em;
+    padding: 2rem;
+    margin: 0;
   }
   
-  input, button {
-    padding: 0.6em;
-    font-size: 1em;
-    margin: 0.5em;
+  h1 {
+    font-size: 2.5rem;
+    color: #ef5350;
+    margin-bottom: 0.2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  /* Form layout */
+  input[type="text"] {
+    padding: 0.7em;
+    font-size: 1rem;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 0.7em 1em;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #ef5350;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Result display */
+  #result {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   #result img {
     width: 200px;
-    margin-top: 1em;
+    margin-top: 1rem;
   }
+  
+  #result p {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+  }
+  
+  #result button {
+    margin-top: 1rem;
+  }
+  
+  /* Evolution chain */
+  .evolution-section {
+    margin-top: 3rem;
+  }
+  
+  .evo-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  .evo-list li {
+    text-align: center;
+  }
+  
+  .evo-list img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  /* Favorites */
+  .favorites-section {
+    margin-top: 3rem;
+  }
+  
+  .favorites-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #favoriteList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+  }
+  
+  #favoriteList img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  #favoriteList img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  a {
+    color: #ef5350;
+    text-decoration: none;
+  }  
