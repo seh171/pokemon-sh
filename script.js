@@ -116,9 +116,23 @@ function capitalize(str) {
     list.innerHTML = "";
   
     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    favorites.forEach(p => {
+    favorites.forEach((p, index) => {
       const li = document.createElement("li");
-      li.innerHTML = `<img src="${p.img}" alt="${p.name}" title="${p.name}" width="60">`;
+      li.innerHTML = `
+        <div class="favorite-entry">
+          <img src="${p.img}" alt="${p.name}" title="${p.name}" width="60">
+          <button class="remove-btn" onclick="removeFavorite(${index})">❌</button>
+        </div>
+      `;
       list.appendChild(li);
     });
-  }  
+  }
+  
+  // New function to remove by index
+  function removeFavorite(index) {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    favorites.splice(index, 1);
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+    displayFavorites();
+  }
+  

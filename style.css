@@ -1,11 +1,22 @@
 /* Base styling */
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(to bottom right, #f0f8ff, #e0f0ff);
     color: #333;
     text-align: center;
     padding: 2rem;
     margin: 0;
+    position: relative;
+    min-height: 100vh;
+  
+    /* Background image setup */
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.85), 
+        rgba(255, 255, 255, 0.85)
+      ),
+      url(https://wallpapers.com/images/hd/all-pokemon-pictures-axl5rufrpb6h4lvo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
   }
   
   h1 {
@@ -136,3 +147,24 @@ body {
     color: #ef5350;
     text-decoration: none;
   }  
+
+  .favorite-entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .remove-btn {
+    margin-top: 0.3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #c0392b;
+    transition: transform 0.2s;
+  }
+  
+  .remove-btn:hover {
+    transform: scale(1.2);
+  }
