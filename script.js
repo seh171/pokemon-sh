@@ -1,3 +1,9 @@
+/* 
+  JavaScript logic developed with support from ChatGPT. 
+  Assistance included fetch requests from PokéAPI, localStorage handling for favorites, 
+  rendering evolution chains, and managing interactive DOM updates.
+*/
+
 function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
